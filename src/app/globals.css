@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Quicksand', ui-sans-serif, system-ui, sans-serif;
+  --font-stack-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-quicksand: 'Quicksand', ui-sans-serif, system-ui, sans-serif;
+
+  --breakpoint-xs: 480px;
+
+  --animate-marquee: marquee 50s linear infinite;
+  --animate-scroll-up: scroll-up 35s linear infinite;
+  --animate-scroll-down: scroll-down 35s linear infinite;
+  --animate-shake: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 12px)); }
+  }
+
+  @keyframes scroll-up {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+
+  @keyframes scroll-down {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+  }
+
+  @keyframes shake {
+    10%, 90% { transform: translateX(-2px); }
+    20%, 80% { transform: translateX(3px); }
+    30%, 50%, 70% { transform: translateX(-5px); }
+    40%, 60% { transform: translateX(5px); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-[#FAFBFD] text-[#0F172A] antialiased;
+    font-family: 'Quicksand', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  /* Futuristic green gradient button with thin outer line */
+  .btn-futuristic-green {
+    @apply inline-flex items-center justify-center gap-2
+           px-8 py-4 text-[15px] font-bold text-white
+           rounded-xl
+           transition-all duration-300 ease-out
+           cursor-pointer;
+    /* Inverted darker green gradient (smooth 60:40 proportion) */
+    background: linear-gradient(to bottom, #022c22 0%, #064e3b 60%, #10b981 100%);
+    /* Bright outline */
+    border: 1px solid #34d399;
+    box-shadow: 0 0 16px rgba(16, 185, 129, 0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+    font-family: 'Quicksand', sans-serif;
+  }
+  .btn-futuristic-green:hover {
+    box-shadow: 0 0 24px rgba(16, 185, 129, 0.4), 0 4px 12px rgba(6, 78, 59, 0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+    transform: translateY(-1px);
+    border-color: #6ee7b7;
+  }
+  .btn-futuristic-green:active {
+    transform: translateY(0px);
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+  }
+
+  /* Square grid texture for light sections - made more visible */
+  .bg-dot-texture {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(15, 23, 42, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+    background-color: #FAFBFD;
+  }
+
+  /* Square grid texture for dark sections - made more visible */
+  .bg-dot-texture-dark {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  }
+}
+
+
