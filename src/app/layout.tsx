@@ -2,34 +2,34 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Laminar Air Flow HEPA H14 Indonesia — Direct Factory | LaminarAirFlow.id",
+  title: "Fume Hood Lemari Asam Indonesia — Direct Factory | FumeHood.id",
   description:
-    "Produsen Laminar Air Flow (LAF) berkualitas tinggi standar SEFA langsung dari pabrik PT. Haian Saintika Eltanindo. Garansi Resmi 1 Tahun & kalibrasi on-site.",
+    "Produsen Fume Hood (Lemari Asam) berkualitas tinggi standar SEFA langsung dari pabrik PT. Haian Saintika Eltanindo. Garansi Resmi 1 Tahun & sertifikasi/kalibrasi on-site.",
   keywords: [
-    "laminar air flow",
-    "LAF",
-    "clean bench",
-    "HEPA filter H14",
+    "fume hood",
+    "lemari asam",
+    "fumehood",
+    "chemical fume hood",
     "furniture laboratorium",
     "standar SEFA",
-    "pabrik LAF Indonesia",
+    "pabrik lemari asam Indonesia",
     "PT. Haian Saintika Eltanindo",
   ],
-  metadataBase: new URL("https://laminarairflow.id"),
+  metadataBase: new URL("https://fumehood.id"),
   openGraph: {
-    title: "Laminar Air Flow HEPA H14 Indonesia — Direct Factory | LaminarAirFlow.id",
+    title: "Fume Hood Lemari Asam Indonesia — Direct Factory | FumeHood.id",
     description:
-      "Produsen Laminar Air Flow (LAF) berkualitas tinggi standar SEFA langsung dari pabrik PT. Haian Saintika Eltanindo. Garansi Resmi 1 Tahun & kalibrasi on-site.",
-    url: "https://laminarairflow.id",
-    siteName: "LaminarAirFlow.id",
+      "Produsen Fume Hood (Lemari Asam) berkualitas tinggi standar SEFA langsung dari pabrik PT. Haian Saintika Eltanindo. Garansi Resmi 1 Tahun & sertifikasi/kalibrasi on-site.",
+    url: "https://fumehood.id",
+    siteName: "FumeHood.id",
     locale: "id_ID",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Laminar Air Flow HEPA H14 Indonesia — Direct Factory",
+    title: "Fume Hood Lemari Asam Indonesia — Direct Factory",
     description:
-      "Produsen Laminar Air Flow (LAF) berkualitas tinggi standar SEFA langsung dari pabrik PT. Haian Saintika Eltanindo.",
+      "Produsen Fume Hood (Lemari Asam) berkualitas tinggi standar SEFA langsung dari pabrik PT. Haian Saintika Eltanindo.",
   },
   icons: {
     icon: "/favicon.ico",
@@ -41,11 +41,11 @@ const schemaJson = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://laminarairflow.id/#organization",
+      "@id": "https://fumehood.id/#organization",
       "name": "PT. Haian Saintika Eltanindo",
-      "url": "https://laminarairflow.id",
-      "logo": "https://laminarairflow.id/favicon.ico",
-      "image": "https://laminarairflow.id/favicon.ico",
+      "url": "https://fumehood.id",
+      "logo": "https://fumehood.id/favicon.ico",
+      "image": "https://fumehood.id/favicon.ico",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Jl. Pangeran Sogiri No.135B, Tanah Baru, Kec. Bogor Utara",
@@ -64,13 +64,13 @@ const schemaJson = {
     },
     {
       "@type": "Product",
-      "@id": "https://laminarairflow.id/#product",
-      "name": "Laminar Air Flow HEPA H14",
-      "image": "https://laminarairflow.id/favicon.ico",
-      "description": "Laminar Air Flow lokal kualitas premium mengacu standar SEFA dilengkapi filter HEPA H14 efisiensi 99.997% dan cabinet Stainless Steel 304/316.",
+      "@id": "https://fumehood.id/#product",
+      "name": "Fume Hood Lemari Asam",
+      "image": "https://fumehood.id/favicon.ico",
+      "description": "Fume Hood (Lemari Asam) lokal kualitas premium mengacu standar SEFA dilengkapi blower centrifugal tahan kimia tinggi dan cabinet Stainless Steel / Phenolic Resin.",
       "brand": {
         "@type": "Brand",
-        "name": "LaminarAirFlow.id"
+        "name": "FumeHood.id"
       },
       "manufacturer": {
         "@type": "Organization",
@@ -103,7 +103,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans bg-[#FAFBFD] text-[#0F172A] selection:bg-teal-500/20 selection:text-teal-900">
+      <body className="min-h-full flex flex-col font-sans bg-slate-950 text-slate-100 selection:bg-teal-500/20 selection:text-teal-200">
         {children}
       </body>
     </html>

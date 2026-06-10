@@ -6,6 +6,42 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
+  const handleCTAClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
+    e.preventDefault();
+    if (typeof window !== "undefined" && (window as any).triggerFormHighlight) {
+      (window as any).triggerFormHighlight(true);
+    } else {
+      const el = document.getElementById("konsultasi-form-container");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+    setMobileOpen(false);
+  };
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const el = document.getElementById(targetId);
+    if (el) {
+      const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 112; // offset for sticky navbar + top padding
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+    setMobileOpen(false);
+  };
+
+  const handlePhoneClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.open("https://wa.me/6281290864275", "_blank", "noopener,noreferrer");
+    setTimeout(() => {
+      window.location.href = "/terimakasih";
+    }, 100);
+    setMobileOpen(false);
+  };
+
   const links = [
     { label: "Proses", href: "#proses" },
     { label: "Produk", href: "#produk" },
@@ -60,51 +96,31 @@ export default function Navbar() {
     };
   }, []);
 
-  // Theme-based styles (dark navbar on light sections, light navbar on dark sections)
-  const navBg = isDark
-    ? 'bg-white/50 border-slate-200/40'
-    : 'bg-slate-900/70 border-white/10';
-
-  const logoColor = isDark
-    ? 'text-slate-900'
-    : 'text-white';
-
-  const linkColor = isDark
-    ? 'text-slate-700 hover:text-slate-900'
-    : 'text-white/90 hover:text-white';
-
-  const phoneIconColor = isDark
-    ? 'text-slate-600'
-    : 'text-white/70';
-
-  const mobileToggleColor = isDark
-    ? 'text-slate-700 hover:text-slate-900'
-    : 'text-white/90 hover:text-white';
-
-  const mobileBg = isDark
-    ? 'bg-white/90 border-slate-200/40'
-    : 'bg-slate-900/90 border-white/10';
-
-  const mobileLinkColor = isDark
-    ? 'text-slate-800 hover:text-slate-900'
-    : 'text-white/90 hover:text-white';
-
-  const mobilePhoneColor = isDark
-    ? 'text-slate-700'
-    : 'text-white/80';
-
-  const mobileHrColor = isDark
-    ? 'border-slate-200'
-    : 'border-white/15';
+  // Theme-based styles (Stunning dark theme glassmorphism by default)
+  const navBg = 'liquid-glass border-none';
+  const logoColor = 'text-white';
+  const linkColor = 'text-slate-300 hover:text-white';
+  const phoneIconColor = 'text-slate-400';
+  const mobileToggleColor = 'text-slate-200 hover:text-white';
+  const mobileBg = 'liquid-glass border-none';
+  const mobileLinkColor = 'text-slate-200 hover:text-white';
+  const mobilePhoneColor = 'text-slate-300';
+  const mobileHrColor = 'border-white/15';
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-10">
-        <nav className={`${navBg} backdrop-blur-2xl rounded-xl shadow-sm px-6 py-3 flex items-center justify-between transition-colors duration-500`}>
+        <nav className={`${navBg} backdrop-blur-2xl rounded-2xl shadow-sm px-6 py-3 flex items-center justify-between transition-colors duration-500`}>
           {/* Logo */}
-          <a href="/" className="flex items-center gap-1.5 group">
-            <span className={`text-lg font-extrabold tracking-tight ${logoColor} font-stack-sans transition-colors duration-500`}>
-              LaminarAirFlow<span className="text-[#10b981]">.id</span>
+          <a href="/" className="flex items-center gap-2.5 group">
+            <svg className="w-5.5 h-5.5 text-white fill-none stroke-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 22V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v18" />
+              <path d="M18 10H6" />
+              <path d="M14 6H10" />
+              <circle cx="12" cy="16" r="2" />
+            </svg>
+            <span className={`text-base font-extrabold tracking-tight ${logoColor} font-stack-sans transition-colors duration-500`}>
+              FumeHood<span className="text-[#10b981]">.id</span>
             </span>
           </a>
 
@@ -114,6 +130,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
+                  onClick={(e) => handleLinkClick(e, link.href)}
                   className={`text-[13px] font-semibold ${linkColor} transition-colors duration-500 tracking-wide font-[var(--font-quicksand)]`}
                 >
                   {link.label}
@@ -124,13 +141,18 @@ export default function Navbar() {
 
           {/* Right Side */}
           <div className="hidden md:flex items-center gap-5">
-            <a href="tel:+6281290864275" className={`flex items-center gap-2 text-[13px] font-semibold ${linkColor} transition-colors duration-500 font-[var(--font-quicksand)]`}>
+            <a 
+              href="https://wa.me/6281290864275" 
+              onClick={handlePhoneClick}
+              className={`flex items-center gap-2 text-[13px] font-semibold ${linkColor} transition-colors duration-500 font-[var(--font-quicksand)]`}
+            >
               <Phone className={`h-3.5 w-3.5 ${phoneIconColor} transition-colors duration-500`} />
               <span>0812-9086-4275</span>
             </a>
             <a
               href="#konsultasi"
-              className="btn-futuristic-green px-5 py-2 text-xs"
+              className="btn-liquid-glass-cta-primary px-5 py-2 text-xs"
+              onClick={handleCTAClick}
             >
               Konsultasi Gratis
             </a>
@@ -148,26 +170,30 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className={`md:hidden mt-2 ${mobileBg} backdrop-blur-2xl rounded-xl shadow-lg p-5 flex flex-col gap-4 transition-colors duration-500`}>
+          <div className={`md:hidden mt-2 ${mobileBg} backdrop-blur-2xl rounded-2xl shadow-lg p-5 flex flex-col gap-4 transition-colors duration-500`}>
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
                 className={`text-sm font-semibold ${mobileLinkColor} transition-colors duration-500 font-[var(--font-quicksand)]`}
-                onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </a>
             ))}
             <hr className={mobileHrColor} />
-            <a href="tel:+6281290864275" className={`flex items-center gap-2 text-sm font-semibold ${mobilePhoneColor} font-[var(--font-quicksand)]`}>
+            <a 
+              href="https://wa.me/6281290864275" 
+              onClick={handlePhoneClick}
+              className={`flex items-center gap-2 text-sm font-semibold ${mobilePhoneColor} font-[var(--font-quicksand)]`}
+            >
               <Phone className={`h-4 w-4 ${phoneIconColor}`} />
               0812-9086-4275
             </a>
             <a
               href="#konsultasi"
-              className="btn-futuristic-green text-center px-5 py-2.5 text-xs"
-              onClick={() => setMobileOpen(false)}
+              className="btn-liquid-glass-cta-primary text-center px-5 py-2.5 text-xs"
+              onClick={handleCTAClick}
             >
               Konsultasi Gratis
             </a>

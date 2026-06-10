@@ -21,7 +21,7 @@ export default function WhatsAppFloating() {
   }, []);
 
   const waNumber = "6281290864275";
-  const message = "Halo tim LaminarAirFlow.id, saya tertarik dengan produk Laminar Air Flow dan ingin berkonsultasi.";
+  const message = "Halo tim FumeHood.id, saya tertarik dengan produk Fume Hood (Lemari Asam) dan ingin berkonsultasi.";
   const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
 
   return (

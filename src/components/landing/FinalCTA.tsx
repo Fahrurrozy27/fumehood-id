@@ -2,32 +2,39 @@
 import { ArrowRight, Clock, Zap } from "lucide-react";
 
 export default function FinalCTA() {
-  return (
-    <section className="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-slate-950 bg-dot-texture-dark overflow-hidden">
-      {/* Background glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#0ebd9f]/8 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#097765]/5 rounded-full blur-[100px] pointer-events-none" />
+  const handleCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (typeof window !== "undefined" && (window as any).triggerFormHighlight) {
+      (window as any).triggerFormHighlight();
+    } else {
+      const el = document.getElementById("konsultasi-form-container");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
+  return (
+    <section className="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-transparent overflow-hidden">
       <div className="mx-auto max-w-6xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 mb-6 bg-white/5 text-[#0ebd9f] px-3.5 py-1.5 rounded-lg border border-[#0ebd9f]/20">
+            <div className="inline-flex items-center gap-2 mb-6 bg-emerald-950/20 text-emerald-400 px-3.5 py-1.5 rounded-full border border-emerald-500/20 liquid-glass">
               <Clock className="h-3.5 w-3.5" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.15em] font-[var(--font-stack-sans)]">Kapasitas Terbatas</span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.15em]">Kapasitas Terbatas</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white mb-5 font-[var(--font-stack-sans)]">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-5">
               Slot Produksi Bulan Ini Terbatas — Amankan Jadwal Anda Sekarang
             </h2>
 
-            <p className="text-sm sm:text-[15px] font-semibold text-slate-400 leading-relaxed mb-8 font-[var(--font-quicksand)]">
+            <p className="text-sm sm:text-[15px] font-semibold text-white/60 leading-relaxed mb-8">
               Dengan kapasitas workshop yang terbatas dan permintaan yang terus meningkat, pastikan proyek laboratorium Anda tidak tertunda. Hubungi tim kami hari ini untuk mendapatkan estimasi harga dan jadwal produksi.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3.5">
               <a
                 href="#konsultasi"
-                className="btn-futuristic-green group"
+                onClick={handleCTAClick}
+                className="btn-liquid-glass-cta-primary group"
               >
                 Amankan Slot Produksi
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -41,9 +48,9 @@ export default function FinalCTA() {
                     window.location.href = "/terimakasih";
                   }, 100);
                 }}
-                className="group inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-bold text-slate-300 border border-white/10 rounded-lg hover:bg-white/5 hover:border-white/20 transition-all duration-200 font-[var(--font-quicksand)]"
+                className="btn-liquid-glass-cta group"
               >
-                <Zap className="h-4 w-4 text-[#0ebd9f]" />
+                <Zap className="h-4 w-4 text-white" />
                 WhatsApp Langsung
               </a>
             </div>
@@ -54,14 +61,14 @@ export default function FinalCTA() {
             {[
               { value: "30+", label: "Lab Dilayani" },
               { value: "48 Jam", label: "Instalasi Prioritas" },
-              { value: "99,997%", label: "Efisiensi HEPA" },
+              { value: "PP", label: "Material Tahan Kimia" },
               { value: "1 Tahun", label: "Garansi Resmi" },
             ].map((stat, i) => (
-              <div key={i} className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 text-center hover:border-[#0ebd9f]/15 transition-colors duration-300">
-                <span className="text-2xl sm:text-3xl font-extrabold bg-gradient-to-b from-[#0ebd9f] to-[#097765] bg-clip-text text-transparent block tracking-tight font-[var(--font-stack-sans)]">
+              <div key={i} className="liquid-glass rounded-2xl p-5 text-center border-none hover:scale-105 transition-transform duration-300 shadow-xl">
+                <span className="text-2xl sm:text-3xl font-extrabold text-emerald-400 block tracking-tight drop-shadow-[0_0_8px_rgba(16,185,129,0.3)]">
                   {stat.value}
                 </span>
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] text-slate-500 mt-1.5 block font-[var(--font-quicksand)]">
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] text-white/40 mt-1.5 block">
                   {stat.label}
                 </span>
               </div>
