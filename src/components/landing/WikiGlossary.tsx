@@ -12,27 +12,27 @@ const GLOSSARY: Record<string, GlossaryItem> = {
   blower: {
     title: "Blower Centrifugal PP/PVDF",
     description: "Kipas pembuangan sentrifugal khusus berbahan termoplastik tahan korosi kimia tinggi. Menjamin daya hisap uap asam pekat tetap kuat dan bebas karat sepanjang masa pakai.",
-    image: "https://images.unsplash.com/photo-1617791160536-598cf32026fb?w=600&auto=format&fit=crop&q=70"
+    image: "/images/glossary/blower.webp"
   },
   sash: {
     title: "Sash Tempered Glass",
     description: "Pintu geser vertikal kaca tempered tebal berpemberat (counterweight). Berfungsi sebagai pelindung fisik utama operator dari risiko ledakan reaksi atau percikan kimia.",
-    image: "https://images.unsplash.com/photo-1581093588401-f3c22d7a1f1b?w=600&auto=format&fit=crop&q=70"
+    image: "/images/glossary/sash.webp"
   },
   sefa: {
     title: "Standar Internasional SEFA",
     description: "Scientific Equipment and Furniture Association. Standar industri internasional yang mengatur kelayakan struktural, keselamatan operasional, & efisiensi aerodinamika alat laboratorium.",
-    image: "https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=600&auto=format&fit=crop&q=70"
+    image: "/images/glossary/sefa.webp"
   },
   "smoke-test": {
     title: "Face Velocity & Smoke Test",
     description: "Metode sertifikasi keselamatan wajib untuk mengukur kecepatan aliran udara (standar 0.3-0.5 m/s) dan memvisualisasikan asap guna memastikan pembuangan tanpa turbulensi balik.",
-    image: "https://images.unsplash.com/photo-1576328077645-2dd68934d2b7?w=600&auto=format&fit=crop&q=70"
+    image: "/images/glossary/smoke-test.webp"
   },
   ducting: {
     title: "Sistem Ducting Laboratorium",
     description: "Saluran pipa pembuangan gas beracun berbahan PVC/PP tebal yang dirancang dengan sudut aerodinamis optimal untuk membuang uap dari Fume Hood (Lemari Asam) ke udara luar dengan lancar.",
-    image: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=600&auto=format&fit=crop&q=70"
+    image: "/images/glossary/ducting.webp"
   }
 };
 
