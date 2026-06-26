@@ -6,63 +6,63 @@ const testimonials = [
     author: "Chandra Purnomo",
     role: "Purchasing",
     company: "PDAM Tirta Giri Nata Cirebon",
-    logo: "/images/logo-cust/pdam-tirta-giri-nata.png"
+    logo: "/images/logo-cust/pdam-tirta-giri-nata.webp"
   },
   {
     quote: "Exhaust system lemari asamnya jalan kenceng dan stabil mas, aman bgt buat nguji oli & kimia pembangkit. Fisik unitnya jg kokoh, safety factor pas bgt sesuai spek safety PLN IP. Sukses trus Haian.",
     author: "Erfin Budi",
     role: "Engineer",
     company: "PLN Indonesia Power Maintenance Bussiness Unit",
-    logo: "/images/logo-cust/pln.png"
+    logo: "/images/logo-cust/pln.webp"
   },
   {
     quote: "Blower centrifugal PP nya juara bos, tahan bgt sm uap asam air industri krakatau. Pemasangan di site jg rapi & cepet. Kemarin minta cek maintenance berkala jg tim aftersales lgsg dtg. Mantapp.",
     author: "Ariantama",
     role: "Site Manager",
     company: "Krakatau Tirta Operasi dan Pemeliharaan",
-    logo: "/images/logo-cust/krakatau.png"
+    logo: "/images/logo-cust/krakatau.webp"
   },
   {
     quote: "Alhamdulillah lemari asamnya sangat membantu untuk riset polimer di ITB. Daya hisapnya stabil jd uap pelarut organik sm asam pekat ga bocor. Kaca tempered nya jg tebel, mahasiswa jd merasa aman pas praktikum.",
     author: "Dr. Nina Siti Aminah, S.Si., M.Si.",
     role: "Dosen/Peneliti",
     company: "Lab. Polimer FMIPA ITB",
-    logo: "/images/logo-cust/itb.png"
+    logo: "/images/logo-cust/itb.webp"
   },
   {
     quote: "Custom ukuran lemari asam kemarin pas bgt sama ruang lab BRIN yg agak sempit. Tim engineeringnya kooperatif bgt diajak diskusi CAD. Smoke test sm face velocity test jg lolos di lokasi. Rekomendasi.",
     author: "Andru Irvanda",
     role: "Purchasing",
     company: "BRIN - Pusat Riset Teknologi Radioisotop, Radiofarmaka dan Biodosimetri",
-    logo: "/images/logo-cust/brin.png"
+    logo: "/images/logo-cust/brin.webp"
   },
   {
     quote: "Lemari asamnya rapi dan aman bgt buat anak-anak sekolah. Harganya jg bersahabat bgt sm budget yayasan Al-Azhar, ga dimarkup mahal kayak impor. Pelayanan adminnya ramah pol.",
     author: "Rr. Septriwi Antarsari, S.Pd.Ing, MM.",
     role: "Kepala Sekolah",
     company: "SMA Islam Al-Azhar 35",
-    logo: "/images/logo-cust/sma-alazhar.png"
+    logo: "/images/logo-cust/sma-alazhar.webp"
   },
   {
     quote: "Pengiriman unit ke site Samator gas ontime sesuai schedule PM mas. Pemasangan ducting & sambungan exhaust gas lancar jaya, ga ada kendala pas ditest. Proyek lancar, trims buat kerjasamanya.",
     author: "Kevin",
     role: "Project Manager",
     company: "Samator Indo Gas Tbk.",
-    logo: "/images/logo-cust/samator.png"
+    logo: "/images/logo-cust/samator.webp"
   },
   {
     quote: "Alhamdulillah lemari asam barunya udh dipake praktek kimia. Suara blowernya ga bising mba, jd kelas tetep tenang pas guru jelasin materi. Praktikum jd aman bgt sekarang.",
     author: "Naili Afwillah, M.Pd",
     role: "Guru Cambridge MA Kimia",
     company: "Madrasah Istiqlal Jakarta",
-    logo: "/images/logo-cust/madrasah-istiqlal.png"
+    logo: "/images/logo-cust/madrasah-istiqlal.webp"
   },
   {
     quote: "Instalasi ducting & unit lemari asam sinkron bgt sm lapangan mas. Koordinasinya gampang, ga ribet. Kualitas barang mantap mirip impor tp dapet harga lokal bogor. Nanti ada proyek lg sy hubungi ya.",
     author: "Lingga",
     role: "Project Supervisor",
     company: "Arkadia Sinergi Indonesia",
-    logo: "/images/logo-cust/arkadia.png"
+    logo: "/images/logo-cust/arkadia.webp"
   }
 ];
 

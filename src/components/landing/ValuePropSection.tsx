@@ -28,7 +28,7 @@ const valueProps: ValuePropItem[] = [
       "Kaca Tempered Berpemberat — keamanan ekstra dari risiko cipratan zat berbahaya",
     ],
     ctaText: "Unduh Spesifikasi Teknis",
-    ctaHref: "/katalog-spek-fh.pdf",
+    ctaHref: "/katalog-spek-fumehood.pdf",
     imageAlt: "[Fume Hood Lemari Asam tampak depan]",
     reverse: false,
     icon: <Shield className="h-4 w-4" />,

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import { User, Phone, Building2, X, Download, MessageSquare, CheckCircle2 } from "lucide-react";
+import { User, Phone, Building2, X, Download, MessageSquare, CheckCircle2, FileText } from "lucide-react";
 
 export default function GatedDownloadModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,8 +45,8 @@ export default function GatedDownloadModal() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/katalog-spek-fh.pdf";
-    link.download = "katalog-spek-fh.pdf";
+    link.href = "/katalog-spek-fumehood.pdf";
+    link.download = "katalog-spek-fumehood.pdf";
     link.target = "_blank";
     document.body.appendChild(link);
     link.click();
@@ -163,10 +163,20 @@ export default function GatedDownloadModal() {
                   Unduh Brosur (PDF)
                 </button>
 
+                <a
+                  href="https://drive.google.com/file/d/1Fu7aNZewzL1y-OmZ4keEjLyLbLphUdfg/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-liquid-glass-cta w-full flex items-center justify-center gap-2 border border-emerald-500/20"
+                >
+                  <FileText className="h-4 w-4 text-emerald-400" />
+                  Unduh Katalog Lengkap Haian Lab
+                </a>
+
                 <button
                   type="button"
                   onClick={handleContactAdmin}
-                  className="btn-liquid-glass-cta w-full flex items-center justify-center gap-2 border border-emerald-500/20"
+                  className="btn-liquid-glass-cta w-full flex items-center justify-center gap-2 border border-white/10"
                 >
                   <MessageSquare className="h-4 w-4 text-emerald-400" />
                   Hubungi Admin via WhatsApp

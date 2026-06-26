@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Fume Hood Lemari Asam Indonesia — Direct Factory | FumeHood.id",
+  title: "Produsen Fume Hood & Lemari Asam - Langsung Pabrik | FumeHood.id",
   description:
     "Produsen Fume Hood (Lemari Asam) berkualitas tinggi standar SEFA langsung dari pabrik PT. Haian Saintika Eltanindo. Garansi Resmi 1 Tahun & sertifikasi/kalibrasi on-site.",
   keywords: [
@@ -17,19 +17,28 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL("https://fumehood.id"),
   openGraph: {
-    title: "Fume Hood Lemari Asam Indonesia — Direct Factory | FumeHood.id",
+    title: "Produsen Fume Hood & Lemari Asam - Langsung Pabrik | FumeHood.id",
     description:
       "Produsen Fume Hood (Lemari Asam) berkualitas tinggi standar SEFA langsung dari pabrik PT. Haian Saintika Eltanindo. Garansi Resmi 1 Tahun & sertifikasi/kalibrasi on-site.",
     url: "https://fumehood.id",
     siteName: "FumeHood.id",
     locale: "id_ID",
     type: "website",
+    images: [
+      {
+        url: "/images/section-c/section-c-4.webp",
+        width: 1200,
+        height: 630,
+        alt: "Fume Hood Lemari Asam - PT. Haian Saintika Eltanindo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fume Hood Lemari Asam Indonesia — Direct Factory",
+    title: "Produsen Fume Hood & Lemari Asam - Langsung Pabrik",
     description:
       "Produsen Fume Hood (Lemari Asam) berkualitas tinggi standar SEFA langsung dari pabrik PT. Haian Saintika Eltanindo.",
+    images: ["/images/section-c/section-c-4.webp"],
   },
   icons: {
     icon: "/favicon.png",
@@ -44,8 +53,8 @@ const schemaJson = {
       "@id": "https://fumehood.id/#organization",
       "name": "PT. Haian Saintika Eltanindo",
       "url": "https://fumehood.id",
-      "logo": "https://fumehood.id/favicon.ico",
-      "image": "https://fumehood.id/favicon.ico",
+      "logo": "https://fumehood.id/favicon.png",
+      "image": "https://fumehood.id/images/section-c/section-c-4.webp",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Jl. Pangeran Sogiri No.135B, Tanah Baru, Kec. Bogor Utara",
@@ -66,7 +75,7 @@ const schemaJson = {
       "@type": "Product",
       "@id": "https://fumehood.id/#product",
       "name": "Fume Hood Lemari Asam",
-      "image": "https://fumehood.id/favicon.ico",
+      "image": "https://fumehood.id/images/section-c/section-c-4.webp",
       "description": "Fume Hood (Lemari Asam) lokal kualitas premium mengacu standar SEFA dilengkapi blower centrifugal tahan kimia tinggi dan cabinet Stainless Steel / Phenolic Resin.",
       "brand": {
         "@type": "Brand",
