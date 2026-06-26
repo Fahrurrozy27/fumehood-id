@@ -45,15 +45,8 @@ export default function WhatsAppFloating() {
 
       {/* Button link */}
       <a
-        href={waUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/terimakasih?source=direct_wa"
         aria-label="Chat WhatsApp"
-        onClick={() => {
-          setTimeout(() => {
-            window.location.href = "/terimakasih";
-          }, 100);
-        }}
         className="relative flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-b from-[#25D366] to-[#128C7E] text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_24px_rgba(37,211,102,0.6)] border border-[#25D366]/20 transition-all duration-300 hover:scale-110 active:scale-95 shrink-0"
       >
         {/* Ripple Ping Animation */}

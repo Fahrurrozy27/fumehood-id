@@ -6,7 +6,7 @@ export default function FAQSection() {
   const faqs = [
     {
       q: "Berapa lama waktu produksi Fume Hood (Lemari\u00A0Asam) dari Haian Lab?",
-      a: "Waktu produksi standar berkisar antara 2–4 minggu tergantung spesifikasi dan jumlah pesanan. Kami juga menyediakan opsi Fast-Track Production dengan instalasi prioritas dalam 48 jam untuk kebutuhan mendesak.",
+      a: "Waktu produksi standar berkisar antara 1–2 minggu karena diproduksi langsung di workshop lokal kami. Kami juga melayani kustomisasi ukuran kabinet secara penuh agar pas dengan kondisi ruangan laboratorium Anda.",
     },
     {
       q: "Apakah Fume Hood (Lemari\u00A0Asam) Haian Lab memenuhi standar SEFA?",

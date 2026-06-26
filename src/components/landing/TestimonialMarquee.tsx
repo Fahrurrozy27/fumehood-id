@@ -2,63 +2,63 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Sangat membantu untuk kelancaran pengujian kualitas air harian kami. Material phenolic resin-nya tahan korosi kimia, dan pengerjaan unit Fume Hood <span class='whitespace-nowrap'>(Lemari Asam)</span> ini rapi serta dikirim tepat waktu sesuai spesifikasi pengadaan.",
+    quote: "Fume hood nya udh kepasang rapi gan di lab air pdam. Phenolic worktopnya mantap tebel, pengerjaan mulus. Pengiriman jg ontime sesuai jadwal PO kemaren. Makasih ya.",
     author: "Chandra Purnomo",
     role: "Purchasing",
     company: "PDAM Tirta Giri Nata Cirebon",
     logo: "/images/logo-cust/pdam-tirta-giri-nata.png"
   },
   {
-    quote: "Konstruksi Fume Hood <span class='whitespace-nowrap'>(Lemari Asam)</span> ini sangat kokoh dan exhaust system-nya bekerja stabil untuk ruang pengujian oli dan kimia pembangkit kami. Safety factor-nya benar-benar memenuhi standar industri.",
+    quote: "Exhaust system lemari asamnya jalan kenceng dan stabil mas, aman bgt buat nguji oli & kimia pembangkit. Fisik unitnya jg kokoh, safety factor pas bgt sesuai spek safety PLN IP. Sukses trus Haian.",
     author: "Erfin Budi",
     role: "Engineer",
     company: "PLN Indonesia Power Maintenance Bussiness Unit",
     logo: "/images/logo-cust/pln.png"
   },
   {
-    quote: "Daya tahan bodi dan blower centrifugal-nya luar biasa untuk lingkungan operasi air industri kami. Instalasi di lapangan sangat profesional, dan tim after-sales sangat responsif saat jadwal maintenance berkala.",
+    quote: "Blower centrifugal PP nya juara bos, tahan bgt sm uap asam air industri krakatau. Pemasangan di site jg rapi & cepet. Kemarin minta cek maintenance berkala jg tim aftersales lgsg dtg. Mantapp.",
     author: "Ariantama",
     role: "Site Manager",
     company: "Krakatau Tirta Operasi dan Pemeliharaan",
     logo: "/images/logo-cust/krakatau.png"
   },
   {
-    quote: "Sangat andal untuk pengujian sintesis polimer yang menggunakan pelarut organik kuat dan zat asam pekat. Face velocity stabil dan sash door tempered glass memberikan rasa aman optimal bagi peneliti di lab.",
+    quote: "Alhamdulillah lemari asamnya sangat membantu untuk riset polimer di ITB. Daya hisapnya stabil jd uap pelarut organik sm asam pekat ga bocor. Kaca tempered nya jg tebel, mahasiswa jd merasa aman pas praktikum.",
     author: "Dr. Nina Siti Aminah, S.Si., M.Si.",
     role: "Dosen/Peneliti",
     company: "Lab. Polimer FMIPA ITB",
     logo: "/images/logo-cust/itb.png"
   },
   {
-    quote: "Tim engineering Haian Lab sangat kooperatif saat kami meminta custom ukuran Fume Hood <span class='whitespace-nowrap'>(Lemari Asam)</span> untuk riset teknologi radioisotop kami. Hasil uji fungsi dan sertifikasi on-site sangat memuaskan.",
+    quote: "Custom ukuran lemari asam kemarin pas bgt sama ruang lab BRIN yg agak sempit. Tim engineeringnya kooperatif bgt diajak diskusi CAD. Smoke test sm face velocity test jg lolos di lokasi. Rekomendasi.",
     author: "Andru Irvanda",
     role: "Purchasing",
     company: "BRIN - Pusat Riset Teknologi Radioisotop, Radiofarmaka dan Biodosimetri",
     logo: "/images/logo-cust/brin.png"
   },
   {
-    quote: "Faktor keamanan adalah prioritas utama untuk lab sekolah kami. Desain kabinetnya rapi, pengoperasian panelnya aman bagi siswa, dan harganya tetap rasional untuk anggaran institusi pendidikan.",
+    quote: "Lemari asamnya rapi dan aman bgt buat anak-anak sekolah. Harganya jg bersahabat bgt sm budget yayasan Al-Azhar, ga dimarkup mahal kayak impor. Pelayanan adminnya ramah pol.",
     author: "Rr. Septriwi Antarsari, S.Pd.Ing, MM.",
     role: "Kepala Sekolah",
     company: "SMA Islam Al-Azhar 35",
     logo: "/images/logo-cust/sma-alazhar.png"
   },
   {
-    quote: "Sangat merekomendasikan untuk proyek fasilitas gas industri. Unit diselesaikan tepat waktu sesuai timeline proyek kami, dan integrasi exhaust dengan manifold gas di area kerja berfungsi tanpa kendala.",
+    quote: "Pengiriman unit ke site Samator gas ontime sesuai schedule PM mas. Pemasangan ducting & sambungan exhaust gas lancar jaya, ga ada kendala pas ditest. Proyek lancar, trims buat kerjasamanya.",
     author: "Kevin",
     role: "Project Manager",
     company: "Samator Indo Gas Tbk.",
     logo: "/images/logo-cust/samator.png"
   },
   {
-    quote: "Praktikum kimia siswa jadi jauh lebih aman dan nyaman. Blower-nya halus tidak bising sehingga suasana kelas tetap kondusif saat guru menyampaikan materi praktikum.",
+    quote: "Alhamdulillah lemari asam barunya udh dipake praktek kimia. Suara blowernya ga bising mba, jd kelas tetep tenang pas guru jelasin materi. Praktikum jd aman bgt sekarang.",
     author: "Naili Afwillah, M.Pd",
     role: "Guru Cambridge MA Kimia",
     company: "Madrasah Istiqlal Jakarta",
     logo: "/images/logo-cust/madrasah-istiqlal.png"
   },
   {
-    quote: "Sebagai supervisor proyek, koordinasi instalasi ducting dan unit dengan tim lapangan Haian Lab berjalan sangat sinkron. Kualitas pengerjaan setara produk impor dengan efisiensi biaya yang nyata.",
+    quote: "Instalasi ducting & unit lemari asam sinkron bgt sm lapangan mas. Koordinasinya gampang, ga ribet. Kualitas barang mantap mirip impor tp dapet harga lokal bogor. Nanti ada proyek lg sy hubungi ya.",
     author: "Lingga",
     role: "Project Supervisor",
     company: "Arkadia Sinergi Indonesia",

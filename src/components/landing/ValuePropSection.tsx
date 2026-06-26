@@ -18,14 +18,14 @@ interface ValuePropItem {
 
 const valueProps: ValuePropItem[] = [
   {
-    label: "Proteksi Kelas Dunia",
-    headline: "Sistem Penghisap Kuat & Desain Aerodinamis — Melindungi Operator dari Uap Berbahaya",
+    label: "Standar Keamanan Internasional",
+    headline: "Proteksi Mutlak untuk Operator Lab Anda",
     description:
-      "Setiap unit Fume Hood <span class='whitespace-nowrap'>(Lemari Asam)</span> kami dilengkapi dengan <span class='wiki-term' data-term='blower'>blower centrifugal PP</span> yang tahan korosi kimia tinggi, baffle untuk distribusi aliran udara optimal, <span class='wiki-term' data-term='sash'>sash door tempered glass</span> serta material worktop dari Phenolic Resin untuk memenuhi persyaratan keselamatan laboratorium internasional dan mengacu pada <span class='wiki-term' data-term='standar-sefa'>standar SEFA</span> (Scientific Equipment dan Furniture Association).",
+      "Uap beracun terbuang sempurna tanpa turbulensi balik. Dilengkapi sistem baffle aerodinamis untuk jalur udara stabil, <span class='wiki-term' data-term='sash'>sash door tempered glass</span> tebal dengan sistem pemberat (counterweight), serta material tahan zat kimia pekat untuk perlindungan penuh yang mengacu pada <span class='wiki-term' data-term='standar-sefa'>standar SEFA</span>.",
     bullets: [
-      "<span class='wiki-term' data-term='blower'>Blower Centrifugal PP</span> — tahan uap asam pekat & kimia korosif",
-      "Worktop Phenolic Resin — tahan tumpahan bahan kimia",
-      "<span class='wiki-term' data-term='sash'>Sash Door Tempered Glass</span> — untuk perlindungan ekstra",
+      "<span class='wiki-term' data-term='blower'>Blower Centrifugal PP</span> — pembuangan uap asam pekat bebas karat",
+      "Worktop Phenolic Resin — resistensi tinggi terhadap tumpahan zat kimia",
+      "Kaca Tempered Berpemberat — keamanan ekstra dari risiko cipratan zat berbahaya",
     ],
     ctaText: "Unduh Spesifikasi Teknis",
     ctaHref: "/katalog-spek-fh.pdf",
@@ -44,14 +44,14 @@ const valueProps: ValuePropItem[] = [
     ],
   },
   {
-    label: "Factory Direct Pricing",
-    headline: "Langsung dari Workshop Kami di Bogor — Potong Rantai Distribusi, Hemat Anggaran",
+    label: "Direct Manufacturer",
+    headline: "Hemat Anggaran 30% & Bebas Kustomisasi Ukuran",
     description:
-      "Sebagai produsen langsung, kami menghilangkan markup distributor dan importir. Anda membayar untuk kualitas material dan keahlian engineering, bukan komisi perantara. Produksi 20% lebih cepat dengan opsi instalasi prioritas 48 jam serta hemat biaya hingga 30%.",
+      "Pesan langsung dari workshop kami di Bogor. Sebagai produsen utama, kami menghilangkan komisi perantara agar anggaran Anda teralokasikan maksimal untuk kualitas fisik unit. Kami melayani kelengkapan administrasi pengadaan secara lengkap, mulai dari surat penawaran resmi hingga penerbitan Faktur Pajak resmi.",
     bullets: [
-      "Harga langsung pabrik — hemat hingga 30%",
-      "Waktu produksi 20% lebih cepat dari rata-rata industri",
-      "Opsi instalasi prioritas dalam 48 jam",
+      "Harga tangan pertama langsung dari pabrik (hemat hingga 30%)",
+      "Waktu pengerjaan terjamin (hanya 1-2 minggu dari kontrak)",
+      "Bisa full custom ukuran kabinet menyesuaikan luas ruangan lab Anda",
     ],
     ctaText: "Minta Penawaran",
     ctaHref: "#konsultasi",
@@ -72,14 +72,14 @@ const valueProps: ValuePropItem[] = [
     ],
   },
   {
-    label: "Garansi 1 Tahun & Purna Jual",
-    headline: "Pengujian Face Velocity, Kalibrasi & Maintenance — Kami Selalu Siap",
+    label: "Jaminan Layanan & Garansi",
+    headline: "Downtime Minimal: Garansi 1 Tahun & Teknisi Lokal Siaga",
     description:
-      "Investasi Fume Hood <span class='whitespace-nowrap'>(Lemari Asam)</span> bukan hanya soal pembelian awal. Dengan garansi resmi 1 tahun, layanan purna jual berkelanjutan, ketersediaan suku cadang lokal, dan tim teknisi berpengalaman, performa safety Fume Hood <span class='whitespace-nowrap'>(Lemari Asam)</span> Anda tetap prima sepanjang masa pakai.",
+      "Aktivitas laboratorium tidak boleh lumpuh karena suku cadang kosong atau servis berbulan-bulan. Sebagai produsen lokal, kami menjamin ketersediaan sparepart di workshop Bogor dan tim teknisi yang siap datang langsung ke lokasi Anda untuk pemeliharaan rutin maupun darurat.",
     bullets: [
-      "Garansi resmi 1 tahun & dukungan teknisi",
-      "Suku cadang lokal — selalu tersedia, tanpa tunggu impor",
-      "<span class='wiki-term' data-term='face-velocity'>Pengujian Face Velocity</span> & uji fungsi (<span class='wiki-term' data-term='smoke-test'>Smoke Test</span>) berkala",
+      "Garansi resmi 1 tahun untuk seluruh komponen mekanis & blower",
+      "Suku cadang ready stock — siap pasang tanpa menunggu inden impor",
+      "Gratis sertifikasi <span class='wiki-term' data-term='smoke-test'>Smoke Test</span> & uji <span class='wiki-term' data-term='face-velocity'>Face Velocity</span> aliran udara",
     ],
     ctaText: "Jadwalkan Maintenance",
     ctaHref: "#konsultasi",

@@ -35,10 +35,7 @@ export default function Navbar() {
 
   const handlePhoneClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.open("https://wa.me/6281290864275", "_blank", "noopener,noreferrer");
-    setTimeout(() => {
-      window.location.href = "/terimakasih";
-    }, 100);
+    window.location.href = "/terimakasih?source=direct_wa";
     setMobileOpen(false);
   };
 
@@ -142,7 +139,7 @@ export default function Navbar() {
           {/* Right Side */}
           <div className="hidden md:flex items-center gap-5">
             <a 
-              href="https://wa.me/6281290864275" 
+              href="/terimakasih?source=direct_wa" 
               onClick={handlePhoneClick}
               className={`flex items-center gap-2 text-[13px] font-semibold ${linkColor} transition-colors duration-500 font-[var(--font-quicksand)]`}
             >
@@ -183,7 +180,7 @@ export default function Navbar() {
             ))}
             <hr className={mobileHrColor} />
             <a 
-              href="https://wa.me/6281290864275" 
+              href="/terimakasih?source=direct_wa" 
               onClick={handlePhoneClick}
               className={`flex items-center gap-2 text-sm font-semibold ${mobilePhoneColor} font-[var(--font-quicksand)]`}
             >

@@ -2,35 +2,62 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { CheckCircle2, ArrowLeft, Download } from "lucide-react";
+import { CheckCircle2, ArrowLeft, ExternalLink } from "lucide-react";
 
 export default function ThankYouPage() {
   const [source, setSource] = useState<string | null>(null);
+  const [countdown, setCountdown] = useState(2);
+  const [waUrl, setWaUrl] = useState<string | null>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
-      const src = params.get("source");
+      const src = params.get("source") || "direct_wa";
+      const nama = params.get("nama") || "";
+      const phone = params.get("phone") || "";
+      const institusi = params.get("institusi") || "";
       setSource(src);
 
-      // Trigger brochure download automatically if coming from the gated brochure modal
-      if (src === "brochure") {
-        const link = document.createElement("a");
-        link.href = "/katalog-spek-fh.pdf";
-        link.download = "katalog-spek-fh.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+      // Construct WhatsApp URL
+      const waNumber = "6281290864275";
+      let text = "";
+
+      if (src === "lead") {
+        text = `Halo tim FumeHood.id, saya ingin mendapatkan penawaran. Berikut detail saya:
+- Nama: ${nama}
+- No. HP / WhatsApp: ${phone}
+- Instansi / Perusahaan: ${institusi}`;
+      } else if (src === "brochure_wa") {
+        text = `Halo tim FumeHood.id, saya ${nama} dari ${institusi} (No. HP: ${phone}) ingin berkonsultasi mengenai Fume Hood Lemari Asam.`;
+      } else {
+        text = `Halo tim FumeHood.id, saya tertarik dengan produk Fume Hood (Lemari Asam) dan ingin berkonsultasi.`;
       }
+
+      const generatedUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
+      setWaUrl(generatedUrl);
+
+      // Countdown effect
+      const interval = setInterval(() => {
+        setCountdown((prev) => (prev > 0 ? prev - 1 : 0));
+      }, 1000);
+
+      // Redirect after 2 seconds
+      const timer = setTimeout(() => {
+        window.location.href = generatedUrl;
+      }, 2000);
+
+      return () => {
+        clearInterval(interval);
+        clearTimeout(timer);
+      };
     }
   }, []);
 
-  const isBrochure = source === "brochure";
-  const title = isBrochure ? "Brosur Sedang Diunduh!" : "Terima Kasih!";
+  const isBrochure = source === "brochure_wa";
+  const title = "Terima Kasih!";
   const message = isBrochure
-    ? "Brosur spesifikasi teknis Fume Hood (Lemari Asam) sedang diunduh secara otomatis. Jika unduhan tidak berjalan otomatis, silakan klik tombol di bawah untuk mengunduh secara manual."
-    : "Permintaan Anda telah berhasil diteruskan ke WhatsApp kami. Tim technical support kami akan segera menghubungi Anda kembali dalam waktu maksimal 1×24 jam.";
+    ? "Permintaan Anda untuk berkonsultasi mengenai spesifikasi teknis sedang diproses."
+    : "Permintaan Anda telah berhasil kami terima.";
 
   return (
     <div className="relative min-h-screen bg-slate-950 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
@@ -50,28 +77,34 @@ export default function ThankYouPage() {
         </h1>
 
         {/* Subtext */}
-        <p className="text-sm sm:text-[15px] font-semibold leading-relaxed text-slate-300 font-[var(--font-quicksand)] mb-8">
+        <p className="text-sm sm:text-[15px] font-semibold leading-relaxed text-slate-300 font-[var(--font-quicksand)] mb-4">
           {message}
+        </p>
+
+        {/* Redirect text */}
+        <p className="text-xs font-medium text-emerald-400/90 mb-8 flex items-center gap-1.5 justify-center">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+          Mengarahkan ke WhatsApp dalam {countdown} detik...
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col w-full gap-3">
+          {waUrl && (
+            <a
+              href={waUrl}
+              className="btn-liquid-glass-cta-primary w-full"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Buka WhatsApp Sekarang
+            </a>
+          )}
           <Link
             href="/"
-            className="btn-liquid-glass-cta-primary w-full"
+            className="btn-liquid-glass-cta w-full"
           >
             <ArrowLeft className="h-4 w-4" />
             Kembali ke Beranda
           </Link>
-          <a
-            href="/katalog-spek-fh.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-liquid-glass-cta w-full"
-          >
-            <Download className="h-4 w-4" />
-            Unduh Manual Brosur
-          </a>
         </div>
 
       </div>

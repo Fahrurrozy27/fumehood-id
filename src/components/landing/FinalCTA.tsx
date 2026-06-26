@@ -19,15 +19,15 @@ export default function FinalCTA() {
           <div>
             <div className="inline-flex items-center gap-2 mb-6 bg-emerald-950/20 text-emerald-400 px-3.5 py-1.5 rounded-full border border-emerald-500/20 liquid-glass">
               <Clock className="h-3.5 w-3.5" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.15em]">Kapasitas Terbatas</span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.15em]">Garansi Jadwal</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-5">
-              Slot Produksi Bulan Ini Terbatas — Amankan Jadwal Anda Sekarang
+              Jaminan Ketepatan Waktu Proyek Laboratorium Anda
             </h2>
 
             <p className="text-sm sm:text-[15px] font-semibold text-white/60 leading-relaxed mb-8">
-              Dengan kapasitas workshop yang terbatas dan permintaan yang terus meningkat, pastikan proyek laboratorium Anda tidak tertunda. Hubungi tim kami hari ini untuk mendapatkan estimasi harga dan jadwal produksi.
+              Kami memahami setiap hari penundaan berarti kerugian biaya operasional. Hubungi tim teknis Haian Lab hari ini untuk survei lokasi gratis dan estimasi jadwal produksi yang terencana.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3.5">
@@ -36,22 +36,15 @@ export default function FinalCTA() {
                 onClick={handleCTAClick}
                 className="btn-liquid-glass-cta-primary group"
               >
-                Amankan Slot Produksi
+                Minta Penawaran Resmi
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="https://wa.me/6281290864275"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => {
-                  setTimeout(() => {
-                    window.location.href = "/terimakasih";
-                  }, 100);
-                }}
+                href="/terimakasih?source=direct_wa"
                 className="btn-liquid-glass-cta group"
               >
                 <Zap className="h-4 w-4 text-white" />
-                WhatsApp Langsung
+                WhatsApp Hubungi Kami
               </a>
             </div>
           </div>

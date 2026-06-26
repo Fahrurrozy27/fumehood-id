@@ -19,28 +19,28 @@ export default function HowItWorks() {
   const steps = [
     {
       icon: MessageSquareText,
-      title: "Permintaan & Penawaran",
-      desc: "Hubungi kami dengan spesifikasi awal. Kami akan merespons cepat dengan penawaran harga (quotation) transparan dan kompetitif.",
+      title: "Minta Quotation",
+      desc: "Kirim spesifikasi awal Anda, tim kami akan mengirimkan penawaran harga resmi dalam waktu 1x24 jam.",
     },
     {
       icon: PencilRuler,
-      title: "Konsultasi & Desain",
-      desc: "Diskusi mendalam terkait kebutuhan lab, site survey gratis jika diperlukan, dan persetujuan gambar kerja (drawing) sebelum produksi.",
+      title: "Desain & CAD",
+      desc: "Konsultasi teknis, survei lokasi gratis, dan pembuatan gambar kerja (CAD) untuk persetujuan desain.",
     },
     {
       icon: Factory,
-      title: "Produksi Pabrik",
-      desc: "Alat diproduksi di workshop kami dengan standar presisi tinggi, menggunakan material Stainless Steel 316 / Phenolic Resin terbaik, dan melewati QC ketat.",
+      title: "Produksi & QC",
+      desc: "Unit diproduksi presisi di workshop Bogor menggunakan material standar industri dan melewati proses inspeksi kualitas ketat.",
     },
     {
       icon: Truck,
-      title: "Pengiriman & Instalasi",
-      desc: "Unit dikirim dengan aman ke lokasi Anda. Tim teknisi ahli kami akan melakukan instalasi penuh termasuk kelistrikan dan sistem <span class='wiki-term' data-term='ducting'>ducting lengkap</span>.",
+      title: "Kirim & Pasang",
+      desc: "Pengiriman aman dan perakitan penuh di lokasi Anda oleh teknisi ahli, termasuk pemasangan sistem <span class='wiki-term' data-term='ducting'>ducting lengkap</span>.",
     },
     {
       icon: ClipboardCheck,
-      title: "Uji Fungsi & Serah Terima",
-      desc: "Pengujian final (<span class='wiki-term' data-term='face-velocity'>kecepatan udara / face velocity</span> &amp; <span class='wiki-term' data-term='smoke-test'>smoke test</span>) untuk memastikan performa safety valid, dilanjutkan dengan training user.",
+      title: "Sertifikasi & Tes",
+      desc: "Uji hisap udara (<span class='wiki-term' data-term='face-velocity'>Face Velocity</span>), uji visual kebocoran (<span class='wiki-term' data-term='smoke-test'>Smoke Test</span>), dan training operator sebelum serah terima.",
     },
   ];
 
@@ -52,10 +52,10 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-5xl relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">
-            Alur Kerja Sistematis: Dari Penawaran Hingga Serah Terima
+            Proses Transparan, Bebas Hambatan
           </h2>
           <p className="text-sm sm:text-[15px] font-semibold text-white/60 max-w-2xl mx-auto leading-relaxed">
-            Proses kerja transparan dan terstruktur kami memastikan Anda mendapatkan Fume Hood <span className="whitespace-nowrap">(Lemari Asam)</span> berkualitas tanpa drama keterlambatan.
+            Mulai dari diskusi sketsa awal hingga sertifikasi keselamatan di laboratorium Anda, kami menjamin pengerjaan yang terstruktur dan tepat waktu.
           </p>
         </div>
 

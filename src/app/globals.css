@@ -114,28 +114,29 @@
            rounded-full
            transition-all duration-300 ease-out
            cursor-pointer;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.28) !important;
     box-shadow: 
-      inset 0 1px 1px rgba(255, 255, 255, 0.08), 
-      0 4px 16px rgba(0, 0, 0, 0.2);
+      inset 0 1px 1px rgba(255, 255, 255, 0.12), 
+      0 4px 16px rgba(0, 0, 0, 0.3);
     font-family: 'Poppins', sans-serif;
   }
   .btn-liquid-glass-cta:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.6) !important;
     box-shadow: 
-      inset 0 1px 1px rgba(255, 255, 255, 0.12), 
-      0 8px 24px rgba(0, 0, 0, 0.3);
-    transform: translateY(-1px) scale(1.02);
+      inset 0 1px 1px rgba(255, 255, 255, 0.2), 
+      0 0 15px rgba(255, 255, 255, 0.2),
+      0 8px 24px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px) scale(1.02);
   }
   .btn-liquid-glass-cta:active {
     transform: translateY(0px) scale(0.98);
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.1);
   }
-
+ 
   /* Primary Green-Tinted Liquid Glass CTA */
   .btn-liquid-glass-cta-primary {
     @apply inline-flex items-center justify-center gap-2
@@ -143,28 +144,28 @@
            rounded-full
            transition-all duration-300 ease-out
            cursor-pointer;
-    background: rgba(16, 185, 129, 0.06);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(5, 150, 105, 0.22) 100%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(16, 185, 129, 0.25) !important;
+    border: 1px solid rgba(52, 211, 153, 0.5) !important;
     box-shadow: 
-      inset 0 1px 1px rgba(255, 255, 255, 0.1), 
-      0 4px 16px rgba(16, 185, 129, 0.05),
-      0 4px 16px rgba(0, 0, 0, 0.2);
+      inset 0 1px 1px rgba(255, 255, 255, 0.15), 
+      0 4px 20px rgba(16, 185, 129, 0.25),
+      0 4px 16px rgba(0, 0, 0, 0.3);
     font-family: 'Poppins', sans-serif;
   }
   .btn-liquid-glass-cta-primary:hover {
-    background: rgba(16, 185, 129, 0.12);
-    border-color: rgba(16, 185, 129, 0.45) !important;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.35) 0%, rgba(5, 150, 105, 0.4) 100%);
+    border-color: rgba(52, 211, 153, 0.95) !important;
     box-shadow: 
-      inset 0 1px 1px rgba(255, 255, 255, 0.2), 
-      0 0 20px rgba(16, 185, 129, 0.25),
-      0 8px 24px rgba(0, 0, 0, 0.35);
-    transform: translateY(-1px) scale(1.02);
+      inset 0 1px 1px rgba(255, 255, 255, 0.25), 
+      0 0 25px rgba(16, 185, 129, 0.55),
+      0 8px 24px rgba(0, 0, 0, 0.45);
+    transform: translateY(-2px) scale(1.02);
   }
   .btn-liquid-glass-cta-primary:active {
     transform: translateY(0px) scale(0.98);
-    background: rgba(16, 185, 129, 0.08);
+    background: rgba(16, 185, 129, 0.2);
   }
 
   /* Square grid texture for light sections - made dark mode compatible */

@@ -9,14 +9,21 @@ export default function HeroSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const waNumber = "6281290864275";
-    const text = `Halo tim FumeHood.id, saya ingin mendapatkan penawaran. Berikut detail saya:
-- Nama: ${formData.nama}
-- No. HP / WhatsApp: ${formData.phone}
-- Instansi / Perusahaan: ${formData.institusi}`;
-    const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank');
-    window.location.href = "/terimakasih?source=lead";
+
+    // Fire-and-forget: kirim data lead ke Telegram & Google Sheets via API
+    fetch('/api/send-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nama: formData.nama,
+        phone: formData.phone,
+        institusi: formData.institusi,
+        source: 'Form Lead — FumeHood.id',
+      }),
+    }).catch(() => {});
+
+    const url = `/terimakasih?source=lead&nama=${encodeURIComponent(formData.nama)}&phone=${encodeURIComponent(formData.phone)}&institusi=${encodeURIComponent(formData.institusi)}`;
+    window.location.href = url;
   };
 
   const triggerFormHighlight = (immediate = false) => {
@@ -80,7 +87,7 @@ export default function HeroSection() {
         <div className="relative z-10 mb-6 flex justify-start">
           <div className="liquid-glass inline-flex items-center px-4 py-2 rounded-full border-none">
             <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider text-emerald-400">
-              Mitra Terpercaya Pengadaan Alat Laboratorium
+              PT. Haian Saintika Eltanindo — Produsen Spesialis Alat Laboratorium
             </span>
           </div>
         </div>
@@ -89,16 +96,15 @@ export default function HeroSection() {
           {/* Left Column — Text & Copy */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             <h1 className="text-3xl sm:text-4xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.1] mb-7">
-              Fume Hood <span className="whitespace-nowrap">(Lemari Asam)</span> dengan Blower PP Centrifugal{' '}
-              <span className="text-emerald-400">— Langsung dari Pabrik</span>, Tanpa Markup
+              Fume Hood Standar SEFA <span className="text-emerald-400">Langsung dari Pabrik</span> — Aman, Presisi, Bergaransi
             </h1>
 
             {/* Checklists */}
             <div className="flex flex-col gap-3.5 mb-9 w-full">
               {[
-                "<span class='wiki-term' data-term='blower'>Blower centrifugal PP/PVDF</span> tahan uap asam pekat & kimia korosif",
-                "Mengacu pada <span class='wiki-term' data-term='sefa'>standar SEFA</span> (Scientific Equipment & Furniture Association)",
-                "Harga pabrik langsung — hemat hingga 30% vs distributor",
+                "<strong>Blower PP Centrifugal & Kustom Material:</strong> Bebas karat dari uap asam pekat. Pilihan interior Phenolic Resin atau Stainless Steel 316 dengan <span class='wiki-term' data-term='blower'>Blower Centrifugal PP</span>.",
+                "<strong>Sertifikasi Aliran Udara:</strong> Pengujian <span class='wiki-term' data-term='face-velocity'>Face Velocity</span> dan <span class='wiki-term' data-term='smoke-test'>Smoke Test</span> langsung di lokasi sesuai <span class='wiki-term' data-term='sefa'>standar SEFA</span>.",
+                "<strong>Produsen Tangan Pertama:</strong> Hemat anggaran pengadaan hingga 30% tanpa perantara distributor dengan waktu pengerjaan 1-2 minggu & bisa full custom ukuran sesuai ruangan lab.",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="h-5.5 w-5.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
@@ -123,7 +129,7 @@ export default function HeroSection() {
               </button>
             </div>
             <p className="text-xs font-medium text-white/40">
-              Konsultasi gratis, tanpa komitmen. Respon cepat dalam 1×24 jam.
+              Siap menerbitkan Faktur Pajak resmi (PPN) untuk pengadaan swasta, BUMN, maupun instansi pemerintah.
             </p>
           </div>
 
@@ -138,10 +144,10 @@ export default function HeroSection() {
               }}
             >
               <h2 className="text-lg font-extrabold text-white mb-1">
-                Dapatkan Penawaran
+                Minta Penawaran Harga
               </h2>
               <p className="text-xs font-semibold text-white/50 mb-6">
-                Isi formulir dan tim teknis kami segera menghubungi Anda.
+                Isi data berikut untuk mendapatkan estimasi biaya dan proposal resmi.
               </p>
 
               <form className="flex flex-col gap-3.5" onSubmit={handleSubmit}>
